@@ -1,4 +1,4 @@
-<?php  
+<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 function my_number_format($number){
@@ -34,7 +34,7 @@ function options($src, $id, $ref_val, $text_field){
 	foreach ($src->result() as $row) {
 		$opt_value	= $row->$id;
 		$text_value	= $row->$text_field;
-		
+
 		if ($row->$id == $ref_val) {
 			$options .= '<option value="'.$opt_value.'" selected>'.$text_value.'</option>';
 		}
@@ -45,30 +45,35 @@ function options($src, $id, $ref_val, $text_field){
 	return $options;
 }
 
+function password($raw_password)
+{
+	return md5('*388#.$raw_password');
+}
+
 function no_slip(){
-	$CI 	=& get_instance();			
+	$CI 	=& get_instance();
 	$reg 	= "";
-	
+
 	$CI->db->select('id');
 	$CI->db->from('transaksi_gaji');
 	$CI->db->order_by('id', 'desc');
 	$CI->db->limit(1);
 	$q_reg = $CI->db->get();
-	
+
 	if ($q_reg->num_rows()>0) {
 		foreach($q_reg->result() as $row){
 			$reg = $row->id;
 		}
 		$reg = substr($reg,8);
 		$reg = $reg+1;
-		
-		if (strlen($reg)==1){$reg='000'.$reg;} 
+
+		if (strlen($reg)==1){$reg='000'.$reg;}
 		elseif(strlen($reg)==2){$reg='00'.$reg;}
 		elseif(strlen($reg)==3){$reg='0'.$reg;}
 		else {$reg=$reg;}
-		
+
 		$reg=date("y").date("m").date("d").$reg;
-	} 
+	}
 	else{
 		$reg=date("y").date("m").date("d").'0001';
 	}
@@ -80,8 +85,8 @@ function tgl_indo($tgl){
 	$bulan = getBulan(substr($tgl,5,2));
 	$tahun = substr($tgl,0,4);
 
-	return $tanggal.' '.$bulan.' '.$tahun;		 
-}	
+	return $tanggal.' '.$bulan.' '.$tahun;
+}
 
 function getBulan($bln){
 	switch ($bln){
@@ -126,7 +131,7 @@ function jquery_select2(){
 }
 
 function bootstrap_datepicker3(){
-	return 
+	return
 		'<link rel="stylesheet" href="'.base_url('/assets/plugins/bootstrap/css/bootstrap-datepicker3.css').'" type="text/css" />'."\n".
 		'<script type="text/javascript" src="'.base_url('/assets/plugins/bootstrap/js/bootstrap-datepicker3.js').'"></script>'."\n";
 }
