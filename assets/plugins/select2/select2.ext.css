@@ -1,0 +1,11 @@
+.select2-container-multi .select2-choices .select2-search-field input,
+.select2-search input {
+	color: #000;
+	font-family: DroidSans;
+}
+.select2-searching,
+.select2-no-results {
+	color: #777;
+	font: 11px DroidSans;
+	padding: 5px;
+}

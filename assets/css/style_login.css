@@ -1,0 +1,60 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+h1,h2,h3,h4,h5,h6{margin:0; padding:0;}
+
+body{font-family: Verdana, Geneva, sans-serif;
+	 color: #888;
+	 font-size: 13px;
+	 background: url(../images/body.jpg) left top repeat;
+}
+.layout-center { margin:10% auto;}
+#wrapper{max-width: 330px;
+		 margin:0 auto;
+	     position: relative;
+}
+#wrappertop{background:url(../images/login/wrapper_top.png) no-repeat;height:21px;}
+#wrappermiddle{background:url(../images/login/wrapper_middle.png) repeat-y;height:220px;}
+#wrapperbottom{background:url(../images/login/wrapper_bottom.png) no-repeat;height:22px;}
+#wrapper h2{margin-left:20px;
+			margin-top:10px;
+		    font-size:20px;
+			font-weight:bold;
+			font-family:Myriad Pro;
+			text-transform:uppercase;
+			position:absolute;
+			text-shadow: #fff 2px 2px 2px;
+}
+#username_input{margin-left:20px;
+			    position:absolute;
+				margin-top:40px;
+}
+#url{display:block;
+	 width:290px;
+	 height:45px;
+	 background:transparent;
+	 color:#bdbdbd;
+	 font-size:14px;
+}
+#password_input{margin-left:20px;
+				position:absolute;
+				margin-top:100px;
+}
+#submit{float:left;
+		position:relative;
+		padding:0;
+		margin-top:160px;
+		margin-left:20px;
+		width:276px;
+		height:40px;
+		border:0;
+}
+#url_btn{display:block;
+	 	 width:290px;
+	 	 height:45px;
+	 	 font-weight:bold;
+	 	 font-family:Myriad Pro;
+	 	 text-transform:uppercase;
+	 	 font-size:14px;
+}

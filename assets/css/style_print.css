@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{font:normal 11px Verdana, Geneva, sans-serif;}
+
+#header, ul.dropdown, #footer{display:none;}
+
+.judul_lap h2{font-size:18px; color:#336CA1; text-align:center;}
+table.lap{width:100%; 
+		  border: 1px solid #999999; 
+		  border-collapse:collapse; 
+		  font-size:9px;
+}
+table.lap th{color: #FFFFFF;
+   			 text-transform:capitalize;
+   			 text-align: center;
+   			 padding: 0.5em;
+   			 border: 1px solid #336CA1;
+   			 border-collapse: collapse;
+   			 background-color: #336CA1;
+}
+table.lap td{padding: 0.5em;
+   			 vertical-align:middle;
+   			 border: 1px solid #336CA1;
+   			 border-collapse: collapse;
+}
+
+.struk{margin: 0 auto; 
+	   width:200px;	
+	   background-color:#ffffff; 
+	   font-size:5px; 
+	   font-family:Arial, Helvetica, sans-serif;
+}
+.struk .struk_judul{text-align:center;}
+.struk .struk_garis{width:200px; border-bottom:1px solid #2D2D2D;}
+
+.barcode{float:left; width:110px; height:100px; margin:5px;}
+
+.rinci_brg .data_trans{height:260px; overflow:auto;}
+div.form_rinci table.form tr td,
+div.form_rinci table.form tr td input,
+table.judul,table.data,table.data,
+table.form{font-size:10px;}
+div.form_rinci table.form tr td{font-weight:bold;}
+div.form_rinci table.form tr td input,
+table.form tr td input{background-color:#ffffff; border:#c5e3fb solid 1px;padding:4px 5px;}
+
+table.judul,table.data{width:100%; border:none;}
+table.judul{border:none; background-color:#336CA1;}
+table.judul tr th{color:#ffffff; text-transform:capitalize; text-align:center; padding:7px 0;}
+table.data{border:none; background-color:#F8F8F8;}
+table.data td{padding:6px 0;}
+table.data tr:nth-child(odd) td{background-color:#fff;}
+table.data tr:nth-child(even) td{background-color:#f7f7f7;}
+table.data tr:hover td{background-color:#e3f2f7;}
